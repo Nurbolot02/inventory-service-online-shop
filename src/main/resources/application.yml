@@ -4,6 +4,11 @@ spring:
   profiles:
     active: ${profile:dev}
 
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
   sleuth:
     sampler:
       probability: 1.0

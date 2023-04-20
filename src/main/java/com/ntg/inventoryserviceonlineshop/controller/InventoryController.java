@@ -26,7 +26,6 @@ public class InventoryController {
     @ResponseStatus(HttpStatus.OK)
     @SneakyThrows
     public List<InventoryResponseDTO> gatInventoryBySkuCode(@RequestParam(required = false) List<String> skuCode) {
-        Thread.sleep(10000);
         return inventoryService.findBySkuCode(skuCode);
     }
 
